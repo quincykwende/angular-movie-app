@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 import { AppComponent } from './app.component';
@@ -8,6 +9,9 @@ import { MoviesComponent } from './movies/movies.component';
 import { MovieListComponent } from './movies/movie-list/movie-list.component';
 import { MovieDetailComponent } from './movies/movie-detail/movie-detail.component';
 import { MovieGenreComponent } from './movies/movie-genre/movie-genre.component';
+import { AppRoutingModule } from './app-routing.module';
+import { MovieService } from './movies/movie.service';
+import { MovieDefaultComponent } from './movies/movie-default/movie-default.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +20,16 @@ import { MovieGenreComponent } from './movies/movie-genre/movie-genre.component'
     MoviesComponent,
     MovieListComponent,
     MovieDetailComponent,
-    MovieGenreComponent
+    MovieGenreComponent,
+    MovieDefaultComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

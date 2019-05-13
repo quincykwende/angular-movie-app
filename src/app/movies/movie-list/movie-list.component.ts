@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate, query } from '@angular/animations';
 
-import { movies } from '../movie.mock-data';
-import { MoviesComponent } from '../movies.component';
+import { movies } from '../movie.model';
+import { MovieService } from '../movie.service';
+
 
 @Component({
   selector: 'app-movie-list',
@@ -31,20 +32,11 @@ import { MoviesComponent } from '../movies.component';
   ]
 })
 export class MovieListComponent implements OnInit {
-  state = 'normal';
-  movies = movies;
+  movies = [];
 
-  constructor() { }
-
-  onHover(){
-    //this.state === 'normal' ? this.state = 'highlighted' : this.state = 'normal';
-  }
-
-  onClick(item) {
-
-  }
+  constructor(private movieService: MovieService) { }
 
   ngOnInit() {
+    this.movies = this.movieService.getMovies();
   }
-
 }

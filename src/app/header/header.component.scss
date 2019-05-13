@@ -1,4 +1,5 @@
 $darkColor: #141414;
+$redColor: #E50914;
 
 .bg-dark{
     background: $darkColor !important;
@@ -6,7 +7,15 @@ $darkColor: #141414;
 .form-control.search-form{
     border-radius: 0px;
     background-color: transparent;
+    height:25px;
+    font-size:11px;
     &:hover, &:after, &:focus {
         background-color: transparent;
     }
+}
+.nav-link{
+    font-size:12px;
+}
+.navbar-brand{
+    color: $redColor;
 }
