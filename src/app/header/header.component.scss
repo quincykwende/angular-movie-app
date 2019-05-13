@@ -1,0 +1,12 @@
+$darkColor: #141414;
+
+.bg-dark{
+    background: $darkColor !important;
+}
+.form-control.search-form{
+    border-radius: 0px;
+    background-color: transparent;
+    &:hover, &:after, &:focus {
+        background-color: transparent;
+    }
+}
