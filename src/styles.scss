@@ -1,2 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+$background: #1c1c1c;
+
+body{
+    background: $background;
+}
+.padding-100{
+    padding-top: 90px;
+}
