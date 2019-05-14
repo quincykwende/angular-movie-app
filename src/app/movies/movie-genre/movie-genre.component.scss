@@ -1,0 +1,11 @@
+h2.title{
+    color:#fff;
+    font-size:16px;
+    margin-bottom:0.8rem;
+}
+h2.title a{
+    color:#E50914;
+    &:hover {
+        text-decoration: underline;
+    }
+}

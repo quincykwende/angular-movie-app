@@ -2,7 +2,6 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 $background: #1c1c1c;
-
 body{
     background: $background;
 }
@@ -12,3 +11,11 @@ body{
 .junbron-top{
     padding-top: 15px;
 }
+.item {
+    margin-bottom: 15px;
+    transition: all .2s ease-in-out;
+    &:hover {
+      transform: scale(1.125);
+      z-index:11;
+    }
+  }

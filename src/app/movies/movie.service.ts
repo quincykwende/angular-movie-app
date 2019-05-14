@@ -1,8 +1,7 @@
 import { EventEmitter, Injectable } from '@angular/core';
 
 import { movies, Movie } from './movie.model';
-import { Key } from 'protractor';
-import { MoviesComponent } from './movies.component';
+import { genreType } from './movie-genre/movie-genre.model';
  
 @Injectable()
 export class MovieService{
@@ -23,5 +22,9 @@ export class MovieService{
         return this.getMovies().filter(function(item) {
             return item.genres === item.genres.indexOf(uri);
         });
+    }
+
+    getGenres(){
+        return genreType;
     }
 }
