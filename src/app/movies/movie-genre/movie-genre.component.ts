@@ -1,19 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import {Location} from '@angular/common';
 
 import { MovieService } from '../movie.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-movie-genre',
   templateUrl: './movie-genre.component.html',
   styleUrls: ['./movie-genre.component.scss']
 })
-export class MovieGenreComponent implements OnInit {
-
+export class MovieGenreComponent implements OnInit, OnDestroy {
   movies = [];
   uri: string;
   genre: string;
+  genreParamsSubscription: Subscription;
 
   constructor(private movieService: MovieService,
     private route: ActivatedRoute,
@@ -22,7 +23,7 @@ export class MovieGenreComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.route.params
+    this.genreParamsSubscription = this.route.params
       .subscribe(
         (params: Params) => {
           this.uri = params['genres'];
@@ -34,6 +35,11 @@ export class MovieGenreComponent implements OnInit {
 
   backClicked() {
     this._location.back();
+  }
+
+  //todo: remove angular 7 handles this by default;
+  ngOnDestroy() {
+    this.genreParamsSubscription.unsubscribe();
   }
 
 }

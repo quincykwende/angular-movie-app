@@ -30,6 +30,7 @@
               "src/styles.scss"
             ],
             "scripts": [
+              "node_modules/ng2-completer/bundles/ng2-completer.umd.js"
             ],
             "es5BrowserSupport": true
           },

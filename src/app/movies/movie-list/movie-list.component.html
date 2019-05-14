@@ -1,7 +1,7 @@
 <div class="container top">
     <div class="row">
       <div 
-        class="col-md-2 col-sm-3 col-xs-6"
+        class="col-6 col-md-2 col-sm-3 col-xs-6"
         [@divState]
         *ngFor="let movie of movies">
         <a [routerLink]="['/movie',movie.key]">

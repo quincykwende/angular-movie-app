@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { movies, Movie } from './movie.model';
 import { MovieService } from './movie.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-movies',
@@ -9,13 +10,14 @@ import { MovieService } from './movie.service';
   styleUrls: ['./movies.component.scss'],
   providers: [MovieService],
 })
-export class MoviesComponent implements OnInit {
+export class MoviesComponent implements OnInit, OnDestroy {
   selectedMovie: Movie;
+  paramsSubscription: Subscription;
 
   constructor(private movieService: MovieService) { }
 
   ngOnInit() {
-    this.movieService.movieSelected
+    this.paramsSubscription = this.movieService.movieSelected
       .subscribe(
         (movie: Movie) => {
           this.selectedMovie = movie;
@@ -23,5 +25,9 @@ export class MoviesComponent implements OnInit {
       );
   }
 
+  //todo: remove angular 7 handles this by default;
+  ngOnDestroy() {
+    this.paramsSubscription.unsubscribe();
+  }
 
 }

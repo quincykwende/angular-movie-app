@@ -9,6 +9,7 @@ $form-background-color: transparent;
 .form-control.search-form{
     border-radius: 0px;
     background-color: $form-background-color;
+    color: $white-color;
     height:25px;
     font-size:11px;
     &:hover, &:after, &:focus {
@@ -31,5 +32,6 @@ $form-background-color: transparent;
 	}
 }
 .dropdown-item{
-    font-size: 12px;
+    font-size: 11px;
+    text-decoration: uppercase;
 }

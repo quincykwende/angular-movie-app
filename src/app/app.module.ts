@@ -27,7 +27,7 @@ import { DropdownDirective } from './directives/dropdown.directive';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]
