@@ -1,7 +1,7 @@
 import { EventEmitter, Injectable } from '@angular/core';
 
 import { movies, Movie } from './movie.model';
-import { genreType } from './movie-genre/movie-genre.model';
+import { genreType, GenreType } from './movie-genre/movie-genre.model';
  
 @Injectable()
 export class MovieService{
@@ -20,11 +20,14 @@ export class MovieService{
     
     getMoviesByGenre(uri: string){
         return this.getMovies().filter(function(item) {
-            return item.genres === item.genres.indexOf(uri);
+           if(item.genres.indexOf(uri) !== -1){
+               return true;
+           }
         });
     }
 
     getGenres(){
-        return genreType;
+        console.log(genreType);
+        return genreType; 
     }
 }
