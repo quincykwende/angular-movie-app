@@ -17,5 +17,11 @@ export class MovieService{
     getMovie(uri: string){
         var obj = this.getMovies().find(x => x.key == uri);
         return obj;
-    }   
+    }  
+    
+    getMoviesByGenre(uri: string){
+        return this.getMovies().filter(function(item) {
+            return item.genres === item.genres.indexOf(uri);
+        });
+    }
 }

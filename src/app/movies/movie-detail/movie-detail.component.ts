@@ -27,7 +27,6 @@ export class MovieDetailComponent implements OnInit {
         (params: Params) => {
           this.uri = params['uri'];
           this.movie = this.movieService.getMovie(this.uri);
-          console.log(this.uri);
         }
       );
   }
