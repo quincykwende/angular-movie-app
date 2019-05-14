@@ -1,4 +1,4 @@
-import { genreType } from "./movie-genre/movie-genre.model";
+import { genreType, GenreType } from "./movie-genre/movie-genre.model";
 
 export const movies: any[] = [
 	{
@@ -242,3 +242,27 @@ export const movies: any[] = [
 		img: "bad-boys.jpg"
 	}
 ];
+
+
+export class Movie {
+    public id: string;
+    public key: string;
+    public name: string;
+    public description: string;
+    public genres: GenreType[];
+    public rate: string;
+	public length: string;
+	public img: string;
+  
+    constructor(id: string, key: string, name: string, description: string, genres: GenreType[], rate: string, length: string,
+        img: string) {
+        this.id = id;
+        this.key = key;
+        this.name = name;
+        this.description = description;
+        this.genres = genres;
+        this.rate = rate;
+        this.length = length;
+        this.img = img;
+    }
+  }

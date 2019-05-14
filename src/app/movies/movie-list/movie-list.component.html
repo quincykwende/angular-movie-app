@@ -4,7 +4,7 @@
         class="col-md-2 col-sm-3 col-xs-6"
         [@divState]
         *ngFor="let movie of movies">
-        <a routerLink="/movie/{{ movie.key }}">
+        <a [routerLink]="['/movie',movie.key]">
           <div class="item">
             <img  class="img-fluid" src="assets/images/movie-covers/{{ movie.img }}">
           </div>
