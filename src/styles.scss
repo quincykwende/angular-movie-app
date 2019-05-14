@@ -1,9 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
-$background: #1c1c1c;
+$body-background-color: #1c1c1c;
+$white-color: #fff;
+$red-color: #E50914;
+
 body{
-    background: $background;
+    background: $body-background-color;
 }
 .top{
     padding-top: 90px;
@@ -18,4 +21,15 @@ body{
       transform: scale(1.125);
       z-index:11;
     }
-  }
+}
+h2.title{
+    color: $white-color;
+    font-size:16px;
+    margin-bottom:0.8rem;
+}
+h2.title a{
+    color: $red-color;
+    &:hover {
+        text-decoration: underline;
+    }
+}

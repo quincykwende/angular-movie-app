@@ -11,7 +11,7 @@ import { MovieDetailComponent } from './movies/movie-detail/movie-detail.compone
 import { MovieGenreComponent } from './movies/movie-genre/movie-genre.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MovieService } from './movies/movie.service';
-import { MovieDefaultComponent } from './movies/movie-default/movie-default.component';
+import { DropdownDirective } from './directives/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { MovieDefaultComponent } from './movies/movie-default/movie-default.comp
     MovieListComponent,
     MovieDetailComponent,
     MovieGenreComponent,
-    MovieDefaultComponent
+    DropdownDirective
   ],
   imports: [
     BrowserModule,

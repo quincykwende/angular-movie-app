@@ -1,6 +1,9 @@
+$white-color: #fff;
+$jumbotron-color: #141414;
+
 .jumbotron{
-    color: #fff;
-    background-color: #1f1f1f;
+    color: $white-color;
+    background-color: $jumbotron-color;
 }
 p{
     margin-bottom:0px !important;

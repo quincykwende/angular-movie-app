@@ -27,7 +27,6 @@ export class MovieService{
     }
 
     getGenres(){
-        console.log(genreType);
         return genreType; 
     }
 }
