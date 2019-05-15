@@ -27,7 +27,7 @@ export class SearchComponent implements OnInit {
       .subscribe( result => console.log(result) );*/
   }
 
-  //todo: .debounceTime(200) & .distinctUntilChanged()
+  //todo: .debounceTime(200) & .distinctUntilChanged() 
   onKeyUp(){
     if(this.searchForm.value.searchData.query.length > 3){
       this.searchSubscription = this.searchService.moviesSearched

@@ -7,6 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - git clone https://github.com/quincykwende/angular-movie-app.git
 - cd angular-movie-app #project directory
 - npm install
+- npm install ng2-completer --save-dev
 
 ## Development server
 

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MoviesComponent } from './movies.component';
+import { MovieService } from './movie.service';
 
 describe('MoviesComponent', () => {
   let component: MoviesComponent;
@@ -22,4 +23,5 @@ describe('MoviesComponent', () => {
   it('should create movie component', () => {
     expect(component).toBeTruthy();
   });
+
 });
