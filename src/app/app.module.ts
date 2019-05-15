@@ -37,5 +37,5 @@ import { SearchService } from './search/search.service';
   ],
   providers: [MovieService, SearchService],
   bootstrap: [AppComponent]
-})
+}) 
 export class AppModule { }
