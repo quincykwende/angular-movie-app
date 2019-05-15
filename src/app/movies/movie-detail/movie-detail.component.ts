@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import {Location} from '@angular/common';
 
-import { movies, Movie } from '../movie.model';
+import { Movie } from '../movie.model';
 import { MovieService } from '../movie.service';
 import { Subscription } from 'rxjs';
 
@@ -19,7 +19,8 @@ export class MovieDetailComponent implements OnInit, OnDestroy {
 
   constructor(private movieService: MovieService,
     private route: ActivatedRoute,
-    private _location: Location
+    private _location: Location,
+    private _router: Router
     ) {
   }
 
