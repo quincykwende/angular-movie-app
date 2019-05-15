@@ -5,27 +5,29 @@
         <a (click)="backClicked()" style="cursor: pointer;"  class="btn btn-sm btn-danger">Go Back</a>
         <br /> <br />
         <div class="media">
-            <img src="assets/images/movie-covers/{{ movie.img }}" class="mr-3" alt="{{ movie.name }}">
-            <div class="media-body">
-              <h5 class="mt-0">{{ movie.name }}</h5>
-              <p class="genres">
-                <span *ngFor="let genre of movie.genres">
-                  <a [routerLink]="['/movies',genre]">
-                    <span class="badge badge-secondary">{{ genre.charAt(0).toUpperCase() + genre.slice(1) }}</span>
-                  </a>
-                  &nbsp;
-                </span>
-              </p>  
-              <p>
-                <b>Length:</b>
-                {{ movie.length }}
-              <p>
-              <p class="break">
-                <b>Rate:</b>
-                {{ movie.rate }}
-              <p>
-              <p> {{ movie.description }} </p>
-            </div>
+            <ng-container *ngIf="movie">
+              <img src="assets/images/movie-covers/{{ movie.img }}" class="mr-3" alt="{{ movie.name }}">
+              <div class="media-body"> 
+                <h5 class="mt-0">{{ movie.name }}</h5>
+                <p class="genres">
+                  <span *ngFor="let genre of movie.genres">
+                    <a [routerLink]="['/movies',genre]">
+                      <span class="badge badge-secondary">{{ genre.charAt(0).toUpperCase() + genre.slice(1) }}</span>
+                    </a>
+                    &nbsp;
+                  </span>
+                </p>  
+                <p>
+                  <b>Length:</b>
+                  {{ movie.length }}
+                <p>
+                <p class="break">
+                  <b>Rate:</b>
+                  {{ movie.rate }}
+                <p>
+                <p> {{ movie.description }} </p>
+              </div>
+            </ng-container>
         </div>
         </div>
         </div>

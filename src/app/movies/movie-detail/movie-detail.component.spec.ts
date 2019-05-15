@@ -4,7 +4,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { MovieDetailComponent } from './movie-detail.component';
 import { MovieService } from '../movie.service';
 
-describe('DetailComponent', () => {
+describe('MovieDetailComponent', () => {
   let component: MovieDetailComponent;
   let fixture: ComponentFixture<MovieDetailComponent>;
 
@@ -23,7 +23,7 @@ describe('DetailComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create movie details component', () => {
     expect(component).toBeTruthy();
   });
 });

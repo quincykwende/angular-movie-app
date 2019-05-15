@@ -27,7 +27,9 @@ export class MovieGenreComponent implements OnInit, OnDestroy {
       .subscribe(
         (params: Params) => {
           this.uri = params['genres'];
-          this.genre = this.uri.toUpperCase();
+          if(this.uri != ''){
+            this.genre = this.uri.toUpperCase();
+          }
           this.movies = this.movieService.getMoviesByGenre(this.uri);
         }
       );
