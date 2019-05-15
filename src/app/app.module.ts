@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -12,6 +13,8 @@ import { MovieGenreComponent } from './movies/movie-genre/movie-genre.component'
 import { AppRoutingModule } from './app-routing.module';
 import { MovieService } from './movies/movie.service';
 import { DropdownDirective } from './directives/dropdown.directive';
+import { SearchComponent } from './search/search.component';
+import { SearchService } from './search/search.service';
 
 @NgModule({
   declarations: [
@@ -21,15 +24,18 @@ import { DropdownDirective } from './directives/dropdown.directive';
     MovieListComponent,
     MovieDetailComponent,
     MovieGenreComponent,
-    DropdownDirective
+    DropdownDirective,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [MovieService],
+  providers: [MovieService, SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

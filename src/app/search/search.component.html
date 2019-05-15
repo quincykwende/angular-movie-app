@@ -1,0 +1,31 @@
+<form class="form-inline mt-2 mt-md-0" (keyup)="onKeyUp()" #f="ngForm">
+  <div
+    id="search-data"
+    ngModelGroup="searchData"
+    #searchData="ngModelGroup">
+  <input 
+        class="form-control mr-sm-2 search-form" 
+        autocomplete="off"
+        type="text" 
+        placeholder="Title, Genres" 
+        FormControlName="query"
+        name="query"
+        ngModel
+    >
+
+    <div class="dropdown" appSearch>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu">
+          <a 
+            class="dropdown-item" 
+            *ngFor="let result of results"
+            [routerLink]="['/movie',result.key]"
+            (click) = "onSelect()"
+          >
+          {{ result.name }}
+          </a>
+      </div>
+    </div>
+
+    </div>
+</form>
+

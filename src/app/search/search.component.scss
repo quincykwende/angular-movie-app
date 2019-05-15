@@ -1,0 +1,33 @@
+$white-color: #fff;
+$form-background-color: transparent;
+.form-control.search-form{
+    border-radius: 0px;
+    background-color: $form-background-color;
+    color: $white-color;
+    height:25px;
+    font-size:11px;
+    &:hover, &:after, &:focus {
+        background-color: $form-background-color;
+    }
+}
+.filter-select {
+    width: 50%;
+    list-style: none;
+    font-size: 1.1em;
+    color: rgb(105, 105, 105);
+    border: 1px solid #ccc;
+    border-top: none;
+    position: absolute;
+    left: 25%;
+    top: calc(50% + 25px);
+    max-height: calc(50% - 15px);
+    overflow-y: auto;
+    background: #fff
+  }
+  .filter-select-list img {
+    margin-right: 30px;
+  }
+  .filter-select-list:hover {
+    background:  #C0C0C0;
+    color: #fff
+  }

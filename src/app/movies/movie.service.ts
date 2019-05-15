@@ -1,7 +1,7 @@
 import { EventEmitter, Injectable } from '@angular/core';
 
 import { movies, Movie } from './movie.model';
-import { genreType, GenreType } from './movie-genre/movie-genre.model';
+import { genreType } from './movie-genre/movie-genre.model';
  
 @Injectable()
 export class MovieService{

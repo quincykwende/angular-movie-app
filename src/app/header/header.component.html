@@ -12,7 +12,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
-                    <ul class="navbar-nav mr-auto">
+                    <ul class="navbar-nav mr-auto"> 
                         <li class="nav-item">
                             <div class="dropdown" appDropdown>
                                 <a class="nav-link dropdown-toggle"  id="dropdownMenu">
@@ -24,15 +24,13 @@
                                         *ngFor="let genre of genres | keyvalue" 
                                         [routerLink]="['/movies',genre.key]"
                                     >
-                                        {{ genre.key }}
+                                        {{ genre.key.charAt(0).toUpperCase() + genre.key.slice(1) }}
                                     </a>
                                 </div>
                             </div>
                         </li>
                     </ul>
-                    <form class="form-inline mt-2 mt-md-0">
-                        <input class="form-control mr-sm-2 search-form" type="text" placeholder="Title, Genres" aria-label="Search">
-                    </form>
+                    <app-search></app-search>
                 </div>
             </div>
         </nav>

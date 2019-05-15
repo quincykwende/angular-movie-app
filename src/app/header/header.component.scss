@@ -1,20 +1,9 @@
 $dark-color: #141414;
 $red-color: #E50914;
 $white-color: #fff;
-$form-background-color: transparent;
 
 .bg-dark{
     background: $dark-color !important;
-}
-.form-control.search-form{
-    border-radius: 0px;
-    background-color: $form-background-color;
-    color: $white-color;
-    height:25px;
-    font-size:11px;
-    &:hover, &:after, &:focus {
-        background-color: $form-background-color;
-    }
 }
 .nav-link {
 	font-size: 12px;
@@ -30,8 +19,4 @@ $form-background-color: transparent;
 			cursor: pointer;
 		}
 	}
-}
-.dropdown-item{
-    font-size: 11px;
-    text-decoration: uppercase;
 }

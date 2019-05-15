@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate, query } from '@angular/animations';
 
-import { movies, Movie } from '../movie.model';
 import { MovieService } from '../movie.service';
-
 
 @Component({
   selector: 'app-movie-list',
