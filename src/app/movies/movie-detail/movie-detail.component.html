@@ -12,7 +12,7 @@
                 <p class="genres">
                   <span *ngFor="let genre of movie.genres">
                     <a [routerLink]="['/movies',genre]">
-                      <span class="badge badge-secondary">{{ genre.charAt(0).toUpperCase() + genre.slice(1) }}</span>
+                      <span class="badge badge-secondary">{{ genre }}</span>
                     </a>
                     &nbsp;
                   </span>

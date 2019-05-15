@@ -16,16 +16,18 @@
                         <li class="nav-item">
                             <div class="dropdown" appDropdown>
                                 <a class="nav-link dropdown-toggle"  id="dropdownMenu">
-                                    Genres
+                                    GENRES
                                 </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+                                <div class="dropdown-menu uppercase" aria-labelledby="dropdownMenu">
+                                    <ng-container *ngIf="genres">
                                     <a 
                                         class="dropdown-item" 
                                         *ngFor="let genre of genres | keyvalue" 
                                         [routerLink]="['/movies',genre.key]"
                                     >
-                                        {{ genre.key.charAt(0).toUpperCase() + genre.key.slice(1) }}
+                                        {{ genre.key }}
                                     </a>
+                                    </ng-container>
                                 </div>
                             </div>
                         </li>
