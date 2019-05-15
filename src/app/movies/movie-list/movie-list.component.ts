@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, state, style, transition, animate, query } from '@angular/animations';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 import { MovieService } from '../movie.service';
 

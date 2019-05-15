@@ -1,12 +1,31 @@
 import { TestBed, async } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { SearchComponent } from './search/search.component';
+import { FormsModule } from '@angular/forms';
+import { MoviesComponent } from './movies/movies.component';
+import { MovieListComponent } from './movies/movie-list/movie-list.component';
+import { MovieDetailComponent } from './movies/movie-detail/movie-detail.component';
+import { MovieGenreComponent } from './movies/movie-genre/movie-genre.component';
+import { MovieService } from './movies/movie.service';
+import { SearchService } from './search/search.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        HeaderComponent,
+        SearchComponent,
+        MoviesComponent,
+        MovieListComponent,
+        MovieDetailComponent,
+        MovieGenreComponent
       ],
+      imports: [ RouterTestingModule, FormsModule ],
+      providers: [ MovieService, SearchService ]
     }).compileComponents();
   }));
 
@@ -16,16 +35,4 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'movie-app'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('movie-app');
-  });
-
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to movie-app!');
-  });
 });

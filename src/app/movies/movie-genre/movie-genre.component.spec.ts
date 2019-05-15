@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { MovieGenreComponent } from './movie-genre.component';
+import { MovieService } from '../movie.service';
 
 describe('MovieGenreComponent', () => {
   let component: MovieGenreComponent;
@@ -8,7 +10,9 @@ describe('MovieGenreComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MovieGenreComponent ]
+      declarations: [ MovieGenreComponent ],
+      imports: [ RouterTestingModule ],
+      providers: [ MovieService ]
     })
     .compileComponents();
   }));
