@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
+This App displays a list of movies; movies can be filter by Genre and user can search for a movie by %title% and or full name of genre. 
+
 ## Set Up
 
 - git clone https://github.com/quincykwende/angular-movie-app.git
