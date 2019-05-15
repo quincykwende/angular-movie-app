@@ -4,6 +4,8 @@
 $body-background-color: #1c1c1c;
 $white-color: #fff;
 $red-color: #E50914;
+$dropdown-hover-color: #212529;
+$dropdown-hover-background: #e8e8e8;
 
 body{
     background: $body-background-color;
@@ -39,4 +41,12 @@ h2.title a{
 }
 .uppercase{
 	text-transform: uppercase;
+}
+.dropdown-menu {
+	>a.dropdown-item {
+		&:hover, &:focus  {
+			background-color: $dropdown-hover-background !important;
+			color: $dropdown-hover-color;
+		}
+	}
 }
